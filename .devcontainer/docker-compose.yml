@@ -1,0 +1,10 @@
+services:
+    p2-stealer:
+        build: .
+        volumes:
+            - ..:/workspaces/project2
+        ports:
+            - "31337:31337"
+        # Prevent container from instantly exiting, allowing us to attach terminal
+        command: /bin/sh -c "sleep infinity"
+
